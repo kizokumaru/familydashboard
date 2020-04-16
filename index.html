@@ -9,49 +9,82 @@
 </head>
 
 <body>
+  
+  <nav class="navbar navbar-dark bg-dark">
+<a class="navbar-brand" href="#">Navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Niños</a>
+      </li>
+    </ul>
+  </div>
+  </nav>
+  
+<!--
+Contenido
+-->
   <div class="container">
     <div class="row justify-content-center">
-      <div class="embed-responsive embed-responsive-21by9 mx-auto">
-        <iframe class="embed-responsive-item" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRtB3BBIjT8mZapIE2aoOeniqze_k5ahIiNRdd5I4y_zusdDfLNj9q9eySg-mRdby6ZMvV992pcogqH/pubchart?oid=561350747&format=interactive"> </iframe>
+      <div>
+        <iframe width="600" height="371" seamless frameborder="0" scrolling="no" align="middle" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRtB3BBIjT8mZapIE2aoOeniqze_k5ahIiNRdd5I4y_zusdDfLNj9q9eySg-mRdby6ZMvV992pcogqH/pubchart?oid=561350747&amp;format=interactive"></iframe>
       </div>
-        </div>
-    <div class="row justify-content-center">
-      <h2 class="text-center">Tareas</h2>
     </div>
+  </div>
+    
+  <div class="row justify-content-center">
+      <h2 class="text-center">Tareas</h2>
+  </div>
   
   <div class="row">
     <div class="col-sm">
-      <ul class="list-group">
-    <li  class="list-group-item">Rentarse cara al aixecarse.</li>
-    <li class="list-group-item">Rentarse les dents despres esmorçar.</li>
-    <li class="list-group-item">Rentarse les mans.</li>
-    <li class="list-group-item">Vestirse senser.</li>
-    <li class="list-group-item">Posar taula per dinar.</li>
-    <li class="list-group-item">Recollir taula dinar.</li>
-    </ul>
+      <ul id="task0" class="list-group">
+      </ul>
     </div>
     <div class="col-sm">
-      <ul class="list-group">
-    <li class="list-group-item">Posar taula per sopar.</li>
-    <li class="list-group-item">Recollir taula despres sopar.</li>
-    <li class="list-group-item">Dutxarse cada 2 dies.</li>
-    <li class="list-group-item">Parla amb respecte.</li>
-    <li class="list-group-item">No dir paraulotes.</li>
-    <li class="list-group-item">Respectar el descans dels altres.</li>
-    </ul>
+      <ul id="task1" class="list-group">
+      </ul>
     </div>
     <div class="col-sm">
-    <ul class="list-group">
-    <li class="list-group-item">Fer els deures assignats.</li>
-    <li class="list-group-item">Veure pelicules/dibuixos en inglés cada día 1 capitol.</li>
-    <li class="list-group-item">Llegir cada dia.</li>
-    <li class="list-group-item">Practicar trompeta cada dia.</li></div>
-    </ul>
+      <ul id="task2" class="list-group">
+      </ul>
+    </div>
   </div>
+  
   </div>
-  </div>
+  
+
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <script>
+  $(document).ready(function(){
+    $.getJSON("https://script.google.com/macros/s/AKfycbyrE19YaL1gkw5otvvV3cGVV2zpjUu1ng1GxHjFSfRhI7vZ7qBJ/exec", function(result){
+      var col = 0;
+      $.each(result, function(i, field){
+        
+        if (col==0){
+        $("#task0").append("<li class='list-group-item'> " +field + "</li> ");}
+        if (col==1){
+        $("#task1").append("<li class='list-group-item'> " + field + "</li> ");}
+        if (col==2){
+        $("#task2").append("<li class='list-group-item'>" + field + "</li> ");}
+        col ++;
+        
+        if (col> 2){
+          col=0;
+          }
+      });
+    });
+  });
+</script>
 </body>
 </html>
