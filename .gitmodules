@@ -1,0 +1,3 @@
+[submodule "mi-sitio/themes/tale"]
+	path = mi-sitio/themes/tale
+	url = https://github.com/EmielH/tale-hugo.git
