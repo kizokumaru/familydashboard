@@ -2,26 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Dashboard</title>
-    <link>https://kizokumaru.github.io/familydashboard/index.html/post/</link>
+    <link>https://kizokumaru.github.io/familydashboard/post/</link>
     <description>Recent content in Posts on Dashboard</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
-    <lastBuildDate>Mon, 08 Nov 2021 12:28:21 +0100</lastBuildDate><atom:link href="https://kizokumaru.github.io/familydashboard/index.html/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 08 Nov 2021 12:28:21 +0100</lastBuildDate><atom:link href="https://kizokumaru.github.io/familydashboard/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Segundo Post</title>
-      <link>https://kizokumaru.github.io/familydashboard/index.html/post/segundo-post/</link>
+      <link>https://kizokumaru.github.io/familydashboard/post/segundo-post/</link>
       <pubDate>Mon, 08 Nov 2021 12:28:21 +0100</pubDate>
       
-      <guid>https://kizokumaru.github.io/familydashboard/index.html/post/segundo-post/</guid>
+      <guid>https://kizokumaru.github.io/familydashboard/post/segundo-post/</guid>
       <description>Prueba de segundo prost.</description>
     </item>
     
     <item>
       <title>Primer Post</title>
-      <link>https://kizokumaru.github.io/familydashboard/index.html/post/primer-post/</link>
+      <link>https://kizokumaru.github.io/familydashboard/post/primer-post/</link>
       <pubDate>Mon, 08 Nov 2021 12:27:29 +0100</pubDate>
       
-      <guid>https://kizokumaru.github.io/familydashboard/index.html/post/primer-post/</guid>
+      <guid>https://kizokumaru.github.io/familydashboard/post/primer-post/</guid>
       <description>Prueba de primera entrada en el blog.</description>
     </item>
     
